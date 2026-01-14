@@ -1,0 +1,129 @@
+.header {
+  background-color: transparent;
+  padding: 1.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+[data-theme='light'] .header {
+  border-bottom: none;
+  background-color: transparent;
+}
+
+[data-theme='dark'] .header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-wrapper {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  /* border-radius: 9999px; */
+  border-radius: 10px;
+  padding: 0.5rem 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 2.5rem;
+  width: auto;
+  display: block;
+}
+
+.logo-text {
+  transition: fill 0.3s ease;
+}
+
+[data-theme='dark'] .logo-text {
+  fill: var(--neutral-0);
+}
+
+[data-theme='light'] .logo-text {
+  fill: var(--neutral-900);
+}
+
+.theme-toggle {
+  background-color: var(--neutral-300);
+  border: 1px solid transparent;
+  cursor: pointer;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  width: 3rem;
+  height: 3rem;
+  min-width: 3rem;
+  min-height: 3rem;
+  position: relative;
+}
+
+[data-theme='dark'] .theme-toggle {
+  background-color: var(--neutral-700);
+}
+
+[data-theme='light'] .theme-toggle {
+  background-color: var(--neutral-300);
+}
+
+.theme-toggle:hover {
+  background-color: var(--neutral-600);
+  border-color: var(--accent-red);
+}
+
+[data-theme='light'] .theme-toggle:hover {
+  background-color: var(--neutral-200);
+  border-color: var(--accent-red);
+}
+
+.theme-toggle:focus {
+  outline: none;
+  border-color: var(--accent-red);
+}
+
+.theme-toggle:focus-visible {
+  outline: none;
+  border: 2px solid var(--accent-red);
+}
+
+.theme-toggle img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 2.5rem 2rem;
+  }
+
+  .logo {
+    height: 3rem;
+  }
+
+  .header-content {
+    padding: 0.75rem 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 3rem 2rem;
+  }
+}

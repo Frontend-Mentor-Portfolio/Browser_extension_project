@@ -1,0 +1,123 @@
+/* Color Palette - Neutral */
+:root {
+  --neutral-900: hsl(227, 75%, 14%);
+  --neutral-800: hsl(226, 25%, 17%);
+  --neutral-700: hsl(225, 23%, 24%);
+  --neutral-600: hsl(226, 11%, 37%);
+  --neutral-300: hsl(0, 0%, 78%);
+  --neutral-200: hsl(217, 61%, 90%);
+  --neutral-100: hsl(0, 0%, 93%);
+  --neutral-0: hsl(200, 60%, 99%);
+  
+  /* Red Palette */
+  --red-400: hsl(3, 86%, 64%);
+  --red-500: hsl(3, 71%, 56%);
+  --red-700: hsl(3, 77%, 44%);
+}
+
+/* CSS Variables for Themes */
+[data-theme='dark'] {
+  --bg-gradient: linear-gradient(180deg, var(--neutral-900) 0%, hsl(227, 75%, 16%) 100%);
+  --bg-primary: var(--neutral-900);
+  --bg-secondary: hsla(227, 75%, 14%, 0.95);
+  --bg-card: var(--neutral-800);
+  --text-primary: var(--neutral-0);
+  --text-secondary: var(--neutral-300);
+  --text-tertiary: var(--neutral-600);
+  --accent-red: var(--red-400);
+  --accent-red-hover: var(--red-500);
+  --border-color: var(--neutral-700);
+  --toggle-off: var(--neutral-700);
+  --button-bg: var(--neutral-800);
+  --button-text: var(--neutral-300);
+  --button-border: var(--neutral-700);
+}
+
+[data-theme='light'] {
+  --bg-gradient: linear-gradient(180deg, var(--neutral-0) 0%, var(--neutral-100) 100%);
+  --bg-primary: var(--neutral-0);
+  --bg-secondary: var(--neutral-0);
+  --bg-card: var(--neutral-0);
+  --text-primary: var(--neutral-900);
+  --text-secondary: var(--neutral-600);
+  --text-tertiary: var(--neutral-600);
+  --accent-red: var(--red-500);
+  --accent-red-hover: var(--red-700);
+  --border-color: var(--neutral-200);
+  --toggle-off: var(--neutral-300);
+  --button-bg: var(--neutral-0);
+  --button-text: var(--neutral-600);
+  --button-border: var(--neutral-200);
+}
+
+.app {
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  transition: background 0.3s ease;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.content-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.main-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.extensions-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+  .main-content {
+    padding: 2.5rem 2rem;
+  }
+
+  .content-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .extensions-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    padding: 3rem 2rem;
+  }
+
+  .extensions-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+  }
+}
