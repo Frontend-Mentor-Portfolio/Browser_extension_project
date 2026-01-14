@@ -33,9 +33,8 @@ Impact: A production-friendly pattern for managing lists with optimistic UI and 
 
 ### Screenshot
 
-![Desktop design](design/desktop-design-dark-active.jpg)
-![Focus design](design/desktop-design-dark-focus.jpg)
-![Mobile design](design/mobile-design-dark.jpg)
+![Desktop design](screenshots/desktop-view.png)
+![Mobile design](screenshots/mobile-view.png)
 
 ### Links
 
